@@ -9,15 +9,18 @@ class Solution {
 
         for(int i=0 ;i< n ;i++){
             for(int j=0 ;j<m ;j++){
-                if(vis[i][j]==true || grid[i][j]==0)continue;
-                int sum=dfs(grid,i,j,vis);
-                ans=Math.max(ans,sum);
-            }
-        }
-        return ans;
-    }
+                 if(grid[i][j]==0 || vis[i][j]==true){
+                    continue;
+                 }
+                 
+                    int sum=dfs(grid,i , j , vis);
+                    ans=Math.max(ans, sum);
+            }}
+            return ans;}
+        
 
-    public int dfs(int[][]grid,int i , int j , boolean[][]vis){
+   
+    public int dfs(int[][]grid,int i , int j , boolean[][]vis ){
         
         int n=grid.length;
         int m =grid[0].length;
